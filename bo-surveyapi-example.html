@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- fusionmedium amplify script start -->
+    <script src="https://main.xxxxx.amplifyapp.com/js/chunk-vendors.js"></script>
+    <script src="https://main.xxxxx.amplifyapp.com/js/app.js"></script>
+    <!-- fusionmedium amplify script end -->
+</head>
+<body>
+    <!-- API usage start -->
+    <script>
+        const formSubmitEvent = () => {
+
+            let data = {
+                name: 'demotest',
+                phone: 'demotest',
+                email: 'demo@fusionmedium.com',
+                company: 'demotest',
+                industry: 'demotest',
+                department: 'demotest',
+                jobTitle: 'demotest',
+                companySize: 'demotest'
+            };
+
+            boSurveySave(data)
+            .then((res) => {
+                // repsonse: {success, message}
+                console.log(res);
+            }).catch((err) => {
+                // Error callback
+                console.log(err);
+            });
+            
+        };
+    </script>
+    <button onclick="formSubmitEvent()">Submit</button>
+    <!-- API usage end -->
+</body>
+</html>
